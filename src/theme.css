@@ -1,0 +1,193 @@
+/* ==========================================================================
+ * 16-Bit Japanese Retro Imageboard - Strawberry Milk Theme & Custom Properties
+ * ========================================================================== */
+
+@layer base {
+  /* ==========================================================================
+   * 1. DEFAULT LIGHT THEME (Strawberry Milk Palette)
+   * ========================================================================== */
+  :root {
+    /* Fonts: 16-Bit PixelMplus Font Stack with relaxed spacing */
+    --font-pixel: 'PixelMplus12', 'PixelMplus', 'DotGothic16', 'M PLUS Rounded 1c', sans-serif;
+    --font-heading: 'PixelMplus12', 'PixelMplus', 'DotGothic16', 'Press Start 2P', monospace;
+
+    /* Backgrounds (Strawberry Milk Palette) */
+    --bg-page: #FFE5EE;              /* #FFE5EE Softest milky blush page background */
+    --bg-surface: #FFB5D4;           /* #FFB5D4 Pastel strawberry navbar, header, panels */
+    --bg-surface-alt: #FFD0E1;       /* #FFD0E1 Soft pastel pink for hovers & sidebars */
+    --bg-card: #FFF2F7;              /* #FFF2F7 Milky pink cards with strawberry borders */
+    --bg-card-alt: #FFC6DB;          /* #FFC6DB Soft bubblegum blush for replies & quotes */
+
+    /* Borders & Outlines */
+    --border-color: #ff4492;         /* #FFB5D4 Medium strawberry dividers & borders */
+    --border-strong: #FF87B9;        /* #FF87B9 Vibrant strawberry frame borders & retro edges */
+
+    /* Typography */
+    --text-primary: #380C1F;         /* Deep berry plum for high-contrast crisp readability */
+    --text-secondary: #7A2E4B;       /* Strawberry plum for metadata, authors, timestamps */
+    --text-muted: #A85374;           /* Soft berry muted text, hints, post numbers */
+
+    /* Primary Accents (Strawberry Milk) */
+    --sidebar-active: #ff87b9;       /* Sidebar and board active state color */
+    --timestamp-color: #ff4492;      /* Light mode timestamp color */
+    --accent-pink: #ff2b83;          /* #FF87B9 Vibrant strawberry for active items & buttons */
+    --accent-pink-soft: #FFD7EC;     /* #FFD7EC Soft lavender-pink for badges & chips */
+    --accent-cherry: #FF87B9;        /* #FF87B9 Medium strawberry for hover & secondary highlights */
+    --accent-contrast-text: #FFFFFF; /* High contrast text on active accent elements */
+    --thread-num-text: #FFFFFF;      /* Thread number font color */
+    --badge-jp-bg: var(--bg-surface-alt); /* Light mode strawberry milk background */
+    --badge-jp-text: var(--text-secondary); /* Light mode text */
+    --badge-jp-border: var(--border-color);
+
+    /* Palette Accents */
+    --accent-lavender: #C084FC;      /* Lavender badges */
+    --accent-mint: #16A34A;          /* Tripcode tags & online indicators */
+    --accent-mint-soft: #DCFCE7;     /* Mint background pill */
+    --accent-cyan: #0284C7;          /* Info badges & links */
+    --accent-peach: #F97316;         /* Orange/peach alert badges */
+    --accent-yellow: #EAB308;        /* Rating stars & bookmarks */
+
+    /* Imageboard Specifics */
+    --greentext: #16A34A;            /* >greentext lines */
+    --greentext-bg: #F0FDF4;         /* >greentext background pill */
+    --link-color: #FF87B9;           /* #FF87B9 Strawberry quote links */
+    --window-header: #FFB5D4;        /* #FFB5D4 Strawberry window titlebar */
+    --window-header-text: #380C1F;   /* Window title text */
+
+    /* 16-Bit Retro Shadows */
+    --pixel-shadow: 4px 4px 0px #FF87B9;
+    --pixel-shadow-sm: 2px 2px 0px #FF87B9;
+    --pixel-shadow-card: 6px 6px 0px #FF87B9;
+    --pixel-shadow-btn: 2px 2px 0px #FF87B9;
+    --pixel-shadow-inset: inset 4px 4px 0px #FFD0E1;
+  }
+
+  /* ==========================================================================
+   * 2. HIGH-CONTRAST LIGHT THEME (High Contrast Strawberry Milk)
+   * ========================================================================== */
+  html[data-contrast="high-contrast"]:not([data-theme="dark"]) {
+    --font-pixel: 'PixelMplus12', 'PixelMplus', 'DotGothic16', 'M PLUS Rounded 1c', sans-serif;
+    --font-heading: 'PixelMplus12', 'PixelMplus', 'DotGothic16', 'Press Start 2P', monospace;
+    --bg-page: #FFF1F4;
+    --bg-surface: #FFB6C9;
+    --bg-surface-alt: #FFD8E4;
+    --bg-card: #FFFFFF;
+    --bg-card-alt: #F8D2E0;
+    --border-color: #FF1E5A;
+    --border-strong: #240512;
+    --text-primary: #240512;
+    --text-secondary: #591730;
+    --text-muted: #852243;
+    --accent-pink: #FF1E5A;
+    --accent-pink-soft: #FFD8E4;
+    --accent-cherry: #FF8DAA;
+    --accent-contrast-text: #FFFFFF;
+    --thread-num-text: #FFFFFF;
+    --badge-jp-bg: var(--bg-surface-alt);
+    --badge-jp-text: var(--text-primary);
+    --badge-jp-border: var(--border-strong);
+    --accent-lavender: #9333EA;
+    --accent-mint: #15803D;
+    --accent-mint-soft: #BBF7D0;
+    --accent-cyan: #0369A1;
+    --accent-peach: #C2410C;
+    --accent-yellow: #A16207;
+    --greentext: #15803D;
+    --greentext-bg: #DCFCE7;
+    --window-header: #FFB6C9;
+    --window-header-text: #240512;
+    --link-color: #FF1E5A;
+    --pixel-shadow: 4px 4px 0px #591730;
+    --pixel-shadow-sm: 2px 2px 0px #591730;
+    --pixel-shadow-card: 6px 6px 0px #591730;
+    --pixel-shadow-btn: 3px 3px 0px #240512;
+    --pixel-shadow-inset: inset 4px 4px 0px #FFB6C9;
+  }
+
+  /* ==========================================================================
+   * 3. DARK THEME (Twilight Cyber Arcade)
+   * ========================================================================== */
+  html[data-theme="dark"]:not([data-contrast="high-contrast"]) {
+    --font-pixel: 'PixelMplus12', 'PixelMplus', 'DotGothic16', 'M PLUS Rounded 1c', sans-serif;
+    --font-heading: 'PixelMplus12', 'PixelMplus', 'DotGothic16', 'Press Start 2P', monospace;
+    --bg-page: #0f0719;              /* Deep midnight background */
+    --bg-surface: #180d28;           /* Darker purple navbar & panels */
+    --bg-surface-alt: #221238;       /* Dark hover state */
+    --bg-card: #120820;              /* Extra dark post cards */
+    --bg-card-alt: #1a0c2e;          /* Dark replies & quotes */
+    --border-color: #553c74;         /* Purple borders */
+    --border-strong: #7852a4;        /* Bright purple edges */
+    --text-primary: #fdf2f8;         /* Soft white-pink text */
+    --text-secondary: #d8b4fe;       /* Lavender text */
+    --text-muted: #a894c2;           /* Muted lavender text */
+    --timestamp-color: #ff87b9;      /* #ff87b9 color for timestamps in darkmode */
+    --sidebar-active: #ff87b9;       /* #ff87b9 for active tabs in dark mode */
+    --accent-pink: #ff99cc;          /* Bright pink active highlight */
+    --accent-pink-soft: #4e1d38;     /* Dark pink background */
+    --accent-cherry: #ff6699;        /* Hover pink */
+    --accent-contrast-text: #380C1F; /* Dark berry color for active tabs in dark mode */
+    --thread-num-text: #1b0713;      /* Darker font color for upper left post number in dark mode */
+    --badge-jp-bg: #380C1F;          /* Dark plum background for jp badges in dark mode */
+    --badge-jp-text: #380C1F;        /* Dark plum font color in dark mode */
+    --badge-jp-border: #7852a4;
+    --accent-lavender: #c084fc;      /* Bright purple accent */
+    --accent-mint: #4ade80;          /* Glowing green tripcode/status */
+    --accent-mint-soft: #14382c;     /* Dark mint tag background */
+    --accent-cyan: #38bdf8;          /* Bright cyan links */
+    --accent-peach: #fb923c;         /* Neon orange alert */
+    --accent-yellow: #facc15;        /* Glowing yellow star */
+    --greentext: #4ade80;            /* Bright green >greentext */
+    --greentext-bg: #133324;         /* Dark green background */
+    --link-color: #f472b6;           /* >>post quote links */
+    --window-header: #351c52;        /* Dark titlebar */
+    --window-header-text: #fdf2f8;   /* Title text */
+    --pixel-shadow: 4px 4px 0px #0b0712;
+    --pixel-shadow-sm: 2px 2px 0px #0b0712;
+    --pixel-shadow-card: 6px 6px 0px #0b0712;
+    --pixel-shadow-btn: 2px 2px 0px #7852a4;
+    --pixel-shadow-inset: inset 4px 4px 0px #312048;
+  }
+
+  /* ==========================================================================
+   * 4. HIGH-CONTRAST DARK THEME (Midnight Cyberpunk)
+   * ========================================================================== */
+  html[data-theme="dark"][data-contrast="high-contrast"] {
+    --font-pixel: 'PixelMplus12', 'PixelMplus', 'DotGothic16', 'M PLUS Rounded 1c', sans-serif;
+    --font-heading: 'PixelMplus12', 'PixelMplus', 'DotGothic16', 'Press Start 2P', monospace;
+    --bg-page: #06020a;
+    --bg-surface: #0f0517;
+    --bg-surface-alt: #1a0a28;
+    --bg-card: #0a0312;
+    --bg-card-alt: #130620;
+    --border-color: #ff3388;
+    --border-strong: #ff99cc;
+    --text-primary: #ffffff;
+    --text-secondary: #fbcfe8;
+    --text-muted: #e9d5ff;
+    --accent-pink: #ff3388;
+    --timestamp-color: #ff87b9;
+    --accent-pink-soft: #630a2f;
+    --accent-cherry: #ff99cc;
+    --accent-contrast-text: #240512;
+    --thread-num-text: #100208;
+    --badge-jp-bg: #240512;
+    --badge-jp-text: #240512;
+    --badge-jp-border: #ff99cc;
+    --accent-lavender: #d8b4fe;
+    --accent-mint: #22c55e;
+    --accent-mint-soft: #052e16;
+    --accent-cyan: #00e5ff;
+    --accent-peach: #ff6b35;
+    --accent-yellow: #ffd600;
+    --greentext: #22c55e;
+    --greentext-bg: #03200d;
+    --window-header: #2b1740;
+    --window-header-text: #ffffff;
+    --link-color: #ff3388;
+    --pixel-shadow: 4px 4px 0px #000000;
+    --pixel-shadow-sm: 2px 2px 0px #000000;
+    --pixel-shadow-card: 6px 6px 0px #000000;
+    --pixel-shadow-btn: 3px 3px 0px #ff3388;
+    --pixel-shadow-inset: inset 4px 4px 0px #2b1740;
+  }
+}

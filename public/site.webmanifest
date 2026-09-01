@@ -1,0 +1,16 @@
+{
+  "name": "ゆめちゃん (YumeChan) 16-Bit Pastel Board",
+  "short_name": "YumeChan",
+  "description": "16-bit Japanese Retro Pastel Thread Board with real-time updates, pixel art studio, poetry formatting, and image sharing.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fdf0f6",
+  "theme_color": "#ff6699",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

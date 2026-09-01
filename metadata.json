@@ -1,0 +1,8 @@
+{
+  "name": "Haniberry Threadboard",
+  "description": "Haniberry threadboard is a bulletin board for posting threads or images for the people who found the server in Discord. It is a safe place for everyone there.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
